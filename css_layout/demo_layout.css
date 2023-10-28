@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+.head, .head-link, .left, .right  {
+    margin-bottom: 10px;
+}
+div.head {
+    background-color: rgb(216, 219, 223);
+}
+div.head-link {
+    background-color: rgb(216, 219, 223);
+    padding-top: 5px ;
+    padding-bottom: 5px;
+}
+
+.head-link-a {
+    text-align: center;
+}
+
+.footer {
+    clear: both;
+    height: 50px;
+    background-color: sienna;
+}
+.left-img > img {
+    width: 100%;
+}
+.left-container {
+    height: 500px;
+    overflow: auto;
+}
+
+/* RWD */
+
+/* laptop/desktop */
+@media screen and (min-width:768px){
+    .left {
+        padding: 5px;
+        width: 30%;
+        background-color: darkgray;
+        float: left;
+    }
+
+    .content {
+        padding: 5px;
+        width: 70%;
+        float: left;
+    }
+}
+
+/* ipad */
+@media screen and (max-width:768px){
+    .left {
+        padding: 5px;
+        width: 50%;
+        background-color: darkgray;
+        float: left;
+    }
+
+    .content {
+        padding: 5px;
+        width: 50%;
+        float: left;
+    }
+}
+
+/* Dien thoai */
+@media screen and (max-width:576px){
+    .left {
+        padding: 5px;
+        width: 100%;
+        background-color: darkgray;
+        float: left;
+    }
+
+    .content {
+        padding: 5px;
+        width: 100%;
+        float: left;
+    }
+}

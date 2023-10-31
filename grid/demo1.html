@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header {
+        background-color: cadetblue;
+        height: 50px;
+        margin-bottom: 5px;
+    }
+    footer {
+            height: 50px;
+            background-color: chocolate;
+            margin-top: 5px;
+    }
+
+    @media screen and (min-width:576px) and (max-width:768px){
+        .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 100px 300px 100px;
+        gap: 10px;
+        background-color: rgb(235, 228, 220);
+        }
+        .item {
+            padding: 10px;
+            background-color: darkgoldenrod;
+        }
+        .item-aside1 {
+            grid-column: 1/4;
+        }
+        .item-aside2 {
+            grid-column: 1/1;
+        }
+        .item-content {
+            grid-column: 2/4;
+        }
+        .item-aside3 {
+            grid-column: 1/4;
+        }
+    }
+
+    @media screen and (min-width:768px){
+        .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-rows: 300px;
+        gap: 10px;
+        background-color: rgb(235, 228, 220);
+        }
+        .item {
+            padding: 10px;
+            background-color: darkgoldenrod;
+        }
+        .item-content {
+            grid-column: 3/6;
+        }
+    }
+
+</style>
+<body>
+    <header>Day la header</header>
+    <div class="container">
+        <aside class="item item-aside1">Menu</aside>
+        <aside class="item item-aside2">Danh sach</aside>
+        <section class="item item-content">Noi dung</section>
+        <aside class="item item-aside3">Quang cao</aside>
+    </div> 
+   <footer>Day la footer</footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header {
+        grid-area: header;
+    }
+    .item-aside1 {
+        grid-area: item-aside1;
+    }
+    .item-aside2 {
+        grid-area: item-aside2;
+    }
+    .item-aside3 {
+        grid-area: item-aside3;
+    }
+    .item-content {
+        grid-area: item-content;
+    }
+    footer {
+        grid-area: footer;
+    }
+
+    @media screen and (min-width:576px) and (max-width:768px){
+        .container {
+        display: grid;
+        grid-template-areas: 
+        "header header header header header header"
+        "item-aside1 item-aside1 item-aside1 item-aside1 item-aside1 item-aside1"
+        "item-aside2 item-aside2 item-content item-content item-content item-content"
+        /* "item-aside3 item-aside3 item-aside3 item-aside3 item-aside3 item-aside3" */
+        "footer footer footer footer footer footer" ;
+        grid-template-rows: 50px 100px 200px 50px;
+        gap: 10px;
+        background-color: rgb(235, 228, 220);
+        }
+        .item {
+            padding: 10px;
+            background-color: darkgoldenrod;
+        }
+        .item-aside3 {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width:768px){
+        .container {
+        display: grid;
+        grid-template-areas: 
+        "header header header header header header"
+        "item-aside1 item-aside2 item-content item-content item-content item-aside3"
+        "footer footer footer footer footer footer" ;
+        grid-template-rows: 50px 300px 50px;
+        gap: 10px;
+        background-color: rgb(235, 228, 220);
+        }
+        .item {
+            padding: 10px;
+            background-color: darkgoldenrod;
+        }
+    }
+
+</style>
+<body>
+    <div class="container">
+        <header>Day la header</header>
+        <aside class="item item-aside1">Menu</aside>
+        <aside class="item item-aside2">Danh sach</aside>
+        <section class="item item-content">Noi dung</section>
+        <aside class="item item-aside3">Quang cao</aside>
+        <footer>Day la footer</footer>
+    </div> 
+</body>
+</html>
